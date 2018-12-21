@@ -16,6 +16,7 @@ class CreateLiveAccountsTable extends Migration
         Schema::create('live_accounts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('currency');
+            $table->string('user_id');
             $table->string('account_type');
             $table->string('leverage');
             $table->string('name');

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'TheTradeFX'),
 
     /*
     |--------------------------------------------------------------------------
@@ -119,7 +119,7 @@ return [
     |
     */
 
-    'key' => env('APP_KEY'),
+    'key' => 'base64:unrtM2196YZr2hWl5pW7M4OknH0xtMsDUSHOln7ACIA=',
 
     'cipher' => 'AES-256-CBC',
 

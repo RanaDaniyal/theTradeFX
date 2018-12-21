@@ -14,7 +14,7 @@
                             START FOR ZERO PIPS
                         </strong>
                     </h1>
-                    <button type="button" class="btn btn-lg  btn-danger" >Create a Live Account</button>
+                    <a  type="button" href="" class="btn btn-lg  btn-outline-danger" role="button">Create a Live Account </a>
                 </div>
 
             </div>

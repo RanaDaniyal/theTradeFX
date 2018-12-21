@@ -37,8 +37,13 @@
                                 <label for="account_type" class="col-md-4 col-form-label text-md-right">{{ __('Account Type') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="account_type" type="text" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus>
-
+                                    {{--<input id="account_type" type="text" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus>--}}
+                                    <input list="account_type" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus>
+                                    <datalist id="account_type">
+                                        <option value="Micro">
+                                        <option value="Standard">
+                                        <option value="VIP">
+                                    </datalist>
                                     @if ($errors->has('account_type'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('account_type') }}</strong>
@@ -48,12 +53,21 @@
                             </div>
 
                             {{--Account Type Input End --}}
+                            {{--Leverage Start--}}
                             <div class="form-group row">
                                 <label for="leverage" class="col-md-4 col-form-label text-md-right">{{ __('leverage') }}</label>
 
                                 <div class="col-md-6">
-                                    <input id="leverage" type="text" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>
-
+                                    {{--<input id="leverage" type="text" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>--}}
+                                    <input list="leverage" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>
+                                    <datalist id="leverage">
+                                        <option value="1:1000">
+                                        <option value="1:500">
+                                        <option value="1:400">
+                                        <option value="1:300">
+                                        <option value="1:200">
+                                        <option value="1:100">
+                                    </datalist>
                                     @if ($errors->has('leverage'))
                                         <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('leverage') }}</strong>
@@ -61,7 +75,7 @@
                                     @endif
                                 </div>
                             </div>
-                            {{--Leverage Start--}}
+
 
 
                             {{--Leverage End--}}

@@ -1,4 +1,4 @@
-<div class=" container-fluid navbar navbar-expand-md navbar-dark bg-dark">
+<div class=" container-fluid navbar navbar-expand-md navbar-dark bg-dark navbar-toggle">
     <div class="container">
         {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
             {{--{{ config('app.name', 'Laravel') }}--}}
@@ -14,8 +14,7 @@
                     <div class="collapse navbar-collapse" id="navbar-menu">
                         <ul class="main_nav ml-auto">
                             <li>
-                                <a href="index.html">Home</a>
-
+                                <a href="{{route('index')}}">Home</a>
                             </li>
 
                             <li>
@@ -24,17 +23,16 @@
 
                                     <ul>
                                         <li><b>PC and Phone</b></li>
-                                        <li><a href="MT5-PC.html">MT5 for PC</a></li>
-                                        <li><a href="MT5-Phone.html">MT5 for Mobile</a></li>
+                                        <li><a href="{{route('mt5_pc')}}">MT5 for PC</a></li>
+                                        <li><a href="{{route('mt5_mob')}}">MT5 for Mobile</a></li>
                                     </ul>
                                     <ul>
-
                                         <li><b>&nbsp;</b></li> </br>
                                         <li><b>&nbsp;</b></li>
                                     </ul>
 
                                     <div class="login_buttomn">
-                                        <a target="_blank" href="liveRegistration.php">Open Live Account</a></br>
+                                        <a target="_blank" href="{{route('live_account')}}">Open Live Account</a></br>
                                         <a target="_blank" href="demoRegister.php">Open Demo Account</a>
                                     </div>
 
@@ -46,9 +44,9 @@
 
                                     <ul>
                                         <li><b>Trading Accounts</b></li>
-                                        <li><a href="Micro-account.html">Micro Account</a></li>
-                                        <li><a href="standard-account.html">Standard Account</a></li>
-                                        <li><a href="vip-account.html">VIP Account</a></li>
+                                        <li><a href="{{route('micro_acc')}}">Micro Account</a></li>
+                                        <li><a href="{{route('std_acc')}}">Standard Account</a></li>
+                                        <li><a href="{{route('vip_acc')}}">VIP Account</a></li>
                                     </ul>
                                     <ul>
 
@@ -57,7 +55,7 @@
                                     </ul>
 
                                     <div class="login_buttomn">
-                                        <a target="_blank" href="liveRegistration.php">Open Live Account</a>
+                                        <a target="_blank" href="{{route('live_account')}}">Open Live Account</a>
                                         <a target="_blank" href="demoRegister.php">Open Demo Account</a>
                                     </div>
 
@@ -71,8 +69,8 @@
 
                                     <ul>
                                         <li><b>Partner Types</b></li>
-                                        <li><a href="Introducing-Brokers.html">Introducing Brokers</a></li>
-                                        <li><a href="affiliate-program.html">Affiliate</a></li>
+                                        <li><a href="{{route('intro_brok')}}">Introducing Brokers</a></li>
+                                        <li><a href="{{route('affiliate_prog')}}">Affiliate</a></li>
                                     </ul>
                                     <ul>
                                         <li><b>&nbsp;</b></li> </br>
@@ -80,39 +78,35 @@
                                     </ul>
 
                                     <div class="login_buttomn">
-                                        <a target="_blank" href="liveRegistration.php">Open Live Account</a>
+                                        <a target="_blank" href="{{route('live_account')}}">Open Live Account</a>
                                         <a target="_blank" href="demoRegister.php">Open Demo Account</a>
                                     </div>
 
                                 </div>
                             </li>
                             <li>
-                                <a href="#contact_form">Payment Method</a>
-                                <div class="submenu">
+                                {{--<a href="#contact_form">Payment Method</a>--}}
+                                {{--<div class="submenu">--}}
 
-                                    <ul>
-                                        <li><b>Payment Services</b></li>
-                                        <li><a href="Payment-method.html">Bit Coin</a></li>
-                                        <li><a href="Payment-method.html">Skrill</a></li>
-                                        <li><a href="Payment-method.html">Neteller</a></li>
-                                        <li><a href="Payment-method.html">Wire Transfer</a></li>
-
-                                    </ul>
-
-                                    <ul>
-                                        <li><b>&nbsp;</b></li>
-                                        <li><a href="Payment-method.html">Master Card</a></li>
-                                        <li><a href="Payment-method.html">VISA</a></li>
-                                        <li><a href="Payment-method.html">American Express</a></li>
-                                        <li><a href="Payment-method.html">Perfect Money</a></li>
-                                    </ul>
-
-                                    <div class="login_buttomn">
-                                        <a target="_blank" href="liveRegistration.php">Open Live Account</a>
-                                        <a target="_blank" href="demoRegister.php">Open Demo Account</a>
-                                    </div>
-
-                                </div>
+                                    {{--<ul>--}}
+                                        {{--<li><b>Payment Services</b></li>--}}
+                                        {{--<li><a href="Payment-method.html">Bit Coin</a></li>--}}
+                                        {{--<li><a href="Payment-method.html">Skrill</a></li>--}}
+                                        {{--<li><a href="Payment-method.html">Neteller</a></li>--}}
+                                        {{--<li><a href="Payment-method.html">Wire Transfer</a></li>--}}
+                                    {{--</ul>--}}
+                                    {{--<ul>--}}
+                                        {{--<li><b>&nbsp;</b></li>--}}
+                                        {{--<li><a href="Payment-method.html">Master Card</a></li>--}}
+                                        {{--<li><a href="Payment-method.html">VISA</a></li>--}}
+                                        {{--<li><a href="Payment-method.html">American Express</a></li>--}}
+                                        {{--<li><a href="Payment-method.html">Perfect Money</a></li>--}}
+                                    {{--</ul>--}}
+                                    {{--<div class="login_buttomn">--}}
+                                        {{--<a target="_blank" href="liveRegistration.php">Open Live Account</a>--}}
+                                        {{--<a target="_blank" href="demoRegister.php">Open Demo Account</a>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
                             </li>
                         </ul>
                     </div>
@@ -123,6 +117,7 @@
                 <!-- Authentication Links -->
                 @guest
                 <li class="nav-item" style="color: #FFFFFF; border: solid 2px; margin-right: 10px">
+                    {{--<a class="nav-link" href="{{ route('login') }}" style="color: #FFFFFF">{{ __('Login') }}</a>--}}
                     <a class="nav-link" href="{{ route('login') }}" style="color: #FFFFFF">{{ __('Login') }}</a>
                 </li>
                 @if (Route::has('register'))
@@ -130,9 +125,9 @@
                         <a class="nav-link" href="{{ route('register') }}" style="color: #FFFFFF">{{ __('Create A Demo Account') }}</a>
                     </li>
                 @endif
-                @if (Route::has('register'))
+                @if (Route::has('register') || Route::has('register'))
                     <li class="nav-item" style="color: #FFFFFF; border: solid 2px;">
-                        <a class="nav-link" href="{{ route('LiveAccountCreate') }}" style="color: #FFFFFF">{{ __('Create A Live Account') }}</a>
+                        <a class="nav-link" href="{{ route('live_account') }}" style="color: #FFFFFF">{{ __('Create A Live Account') }}</a>
                     </li>
                 @endif
                 @else
@@ -144,13 +139,21 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
-                            s</a>
+                            </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
+                        </div>
+
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ route('home') }}">
+                                {{ __('Dashboard') }}
+                            </a>
                         </div>
                     </li>
                     @endguest

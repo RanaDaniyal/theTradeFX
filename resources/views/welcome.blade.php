@@ -7,12 +7,13 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'TheTradeFx') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
+    <link href="{{asset('images/fav.png')}}" rel="icon" type="images/fav.png" />
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
@@ -60,6 +61,7 @@
                 </div>
             </div>
         </div>
+
         {{--2nd Div Start--}}
         <div class="container">
             <div class="row">
@@ -96,8 +98,8 @@
                         {{--First Cards Start--}}
                         <div class="card">
                             <div class="card-header bg-light border-top " id="headingOne">
-                                <button class="btn btn-block  btn-outline-danger collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <h1> Why Choose FX Trading</h1>
+                                <button class="btn btn-block  btn-outline-danger collapsed" style="font-size: 20px" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                     Why Choose FX Trading
                                 </button>
                             </div>
                             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -128,8 +130,8 @@
                         <div class="card">
                             <div class="card-header" id="headingTwo">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-block  btn-outline-danger collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                       <h1>What is Forex Market</h1>
+                                    <button class="btn btn-block  btn-outline-danger collapsed" style="font-size: 20px" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                       What is Forex Market
                                     </button>
                                 </h5>
                             </div>
@@ -155,8 +157,8 @@
                         <div class="card">
                             <div class="card-header" id="headingThree">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-block  btn-outline-danger collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <h1>Who Are Forex Broker</h1>
+                                    <button class="btn btn-block  btn-outline-danger collapsed" style="font-size: 20px" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Who Are Forex Broker
                                     </button>
                                 </h5>
                             </div>
@@ -182,8 +184,8 @@
                         <div class="card">
                             <div class="card-header" id="headingFour">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-block  btn-outline-danger collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        <h1>Forex Demo Account.</h1>
+                                    <button class="btn btn-block  btn-outline-danger collapsed" style="font-size: 20px" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                       Forex Demo Account.
                                     </button>
                                 </h5>
                             </div>
@@ -216,8 +218,8 @@
                         <div class="card">
                             <div class="card-header" id="headingFive">
                                 <h5 class="mb-0">
-                                    <button class="btn btn-block  btn-outline-danger collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        <h1>Forex For Beginers</h1>
+                                    <button class="btn btn-block  btn-outline-danger collapsed" style="font-size: 20px" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                        Forex For Beginers
                                     </button>
                                 </h5>
                             </div>
@@ -299,7 +301,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-dark">Create Live Account</button>
+                        <a role="button" href="{{ route('live_account') }}" type="button" class="btn btn-lg btn-block btn-dark">Create Live Account</a>
                     </div>
                 </div>
                 <div class="card mb-4 shadow-sm">
@@ -313,10 +315,11 @@
                             <li>Negative balance protection</li>
                             <li>Risk management</li>
                         </ul>
-                        <div style="padding-top: 93px">
-                            <button type="button" class="btn btn-lg btn-block btn-dark" >Create a Live Account</button>
+                        <div>
+                            <a role="button" type="button" href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-dark" >Create a Live Account</a>
                         </div>
-
+                    </div>
+                    <div class="row">
                     </div>
                 </div>
                 <div class="card mb-4 shadow-sm">
@@ -335,7 +338,7 @@
                             <li>Commissions paid into a trading account in real time</li>
                             <li>Commission Everyday Payment</li>
                         </ul>
-                        <button type="button" class="btn btn-lg btn-block btn-dark">Create Live Account</button>
+                        <a role="button" type="button" href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-dark">Create Live Account</a>
                     </div>
                 </div>
             </div>

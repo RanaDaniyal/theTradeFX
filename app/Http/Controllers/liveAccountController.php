@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\LiveAccount;
+use App\User;
 
 class liveAccountController extends Controller
 {
@@ -14,7 +15,7 @@ class liveAccountController extends Controller
      */
     public function index()
     {
-
+        return view('register.live_account');
     }
 
     /**
@@ -24,7 +25,7 @@ class liveAccountController extends Controller
      */
     public function create()
     {
-        return view('register.liveaccount');
+       //
     }
 
     /**
@@ -35,8 +36,18 @@ class liveAccountController extends Controller
      */
     public function store(Request $request)
     {
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->user_name = $request->input('user_name');
+        $user->email = $request->input('email');
+        $user->phone_number = $request->input('phone_number');
+        $user->status = 1;
+        $user->password = bcrypt($request->input('password'));
+        $user->save();
+
         $liveAccount = new LiveAccount();
         $liveAccount->currency = $request->input('currency');
+        $liveAccount->user_id = $user->id;
         $liveAccount->account_type = $request->input('account_type');
         $liveAccount->leverage = $request->input('leverage');
         $liveAccount->name = $request->input('name');
@@ -46,7 +57,7 @@ class liveAccountController extends Controller
         $liveAccount->city = $request->input('city');
         $liveAccount->country = $request->input('country');
         $liveAccount->phone_number = $request->input('phone_number');
-        $liveAccount->password = $request->input('password');
+        $liveAccount->password = bcrypt($request->input('password'));
         $liveAccount->save();
 
         return redirect()->action('LiveDashboardController@dashboardView');
