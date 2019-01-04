@@ -1,26 +1,21 @@
-<div class=" container-fluid navbar navbar-expand-md navbar-dark bg-dark navbar-toggle">
+<div class=" container-fluid navbar navbar-expand-md navbar-dark bg-dark navbar-toggle" role="navigation">
     <div class="container">
-        {{--<a class="navbar-brand" href="{{ url('/') }}">--}}
-            {{--{{ config('app.name', 'Laravel') }}--}}
-        {{--</a>--}}
+        <a class="navbar-brand" href="{{ url('/') }}">
+            {{ config('app.name', 'TheTradeFX') }}
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-                <li>
-                    <div class="collapse navbar-collapse" id="navbar-menu">
-                        <ul class="main_nav ml-auto">
-                            <li>
-                                <a href="{{route('index')}}">Home</a>
-                            </li>
 
+                <li>
+                    <ul class="collapse navbar-collapse navbar-nav mr-auto" id="navbar-menu">
+                        <ul class="main_nav ml-auto">
                             <li>
                                 <a href="#Trading Platform">Trading Platform</a>
                                 <div class="submenu">
-
                                     <ul>
                                         <li><b>PC and Phone</b></li>
                                         <li><a href="{{route('mt5_pc')}}">MT5 for PC</a></li>
@@ -30,18 +25,15 @@
                                         <li><b>&nbsp;</b></li> </br>
                                         <li><b>&nbsp;</b></li>
                                     </ul>
-
                                     <div class="login_buttomn">
                                         <a target="_blank" href="{{route('live_account')}}">Open Live Account</a></br>
-                                        <a target="_blank" href="demoRegister.php">Open Demo Account</a>
+                                        <a target="_blank" href="{{ route('register') }}">Open Demo Account</a>
                                     </div>
-
                                 </div>
                             </li>
                             <li>
                                 <a href="#services">Account Types</a>
                                 <div class="submenu">
-
                                     <ul>
                                         <li><b>Trading Accounts</b></li>
                                         <li><a href="{{route('micro_acc')}}">Micro Account</a></li>
@@ -53,16 +45,12 @@
                                         <li><b>&nbsp;</b></li> </br>
                                         <li><b>&nbsp;</b></li>
                                     </ul>
-
                                     <div class="login_buttomn">
                                         <a target="_blank" href="{{route('live_account')}}">Open Live Account</a>
-                                        <a target="_blank" href="demoRegister.php">Open Demo Account</a>
+                                        <a target="_blank" href="{{ route('register') }}">Open Demo Account</a>
                                     </div>
-
                                 </div>
                             </li>
-
-
                             <li>
                                 <a href="#portfolio">Partner</a>
                                 <div class="submenu">
@@ -79,37 +67,36 @@
 
                                     <div class="login_buttomn">
                                         <a target="_blank" href="{{route('live_account')}}">Open Live Account</a>
-                                        <a target="_blank" href="demoRegister.php">Open Demo Account</a>
+                                        <a target="_blank" href="{{ route('register') }}">Open Demo Account</a>
                                     </div>
 
                                 </div>
                             </li>
                             <li>
-                                {{--<a href="#contact_form">Payment Method</a>--}}
-                                {{--<div class="submenu">--}}
-
-                                    {{--<ul>--}}
-                                        {{--<li><b>Payment Services</b></li>--}}
-                                        {{--<li><a href="Payment-method.html">Bit Coin</a></li>--}}
-                                        {{--<li><a href="Payment-method.html">Skrill</a></li>--}}
-                                        {{--<li><a href="Payment-method.html">Neteller</a></li>--}}
-                                        {{--<li><a href="Payment-method.html">Wire Transfer</a></li>--}}
-                                    {{--</ul>--}}
-                                    {{--<ul>--}}
-                                        {{--<li><b>&nbsp;</b></li>--}}
-                                        {{--<li><a href="Payment-method.html">Master Card</a></li>--}}
-                                        {{--<li><a href="Payment-method.html">VISA</a></li>--}}
-                                        {{--<li><a href="Payment-method.html">American Express</a></li>--}}
-                                        {{--<li><a href="Payment-method.html">Perfect Money</a></li>--}}
-                                    {{--</ul>--}}
-                                    {{--<div class="login_buttomn">--}}
-                                        {{--<a target="_blank" href="liveRegistration.php">Open Live Account</a>--}}
-                                        {{--<a target="_blank" href="demoRegister.php">Open Demo Account</a>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
+                                <a href="#contact_form">Payment Method</a>
+                                <div class="submenu">
+                                    <ul>
+                                        <li><b>Payment Services</b></li>
+                                        <li><a href="{{route('paymentMethod')}}">Bit Coin</a></li>
+                                        <li><a href="{{route('paymentMethod')}}">Skrill</a></li>
+                                        <li><a href="{{route('paymentMethod')}}">Neteller</a></li>
+                                        <li><a href="{{route('paymentMethod')}}">Wire Transfer</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><b>&nbsp;</b></li>
+                                        <li><a href="{{route('paymentMethod')}}">Master Card</a></li>
+                                        <li><a href="{{route('paymentMethod')}}">VISA</a></li>
+                                        <li><a href="{{route('paymentMethod')}}">American Express</a></li>
+                                        <li><a href="{{route('paymentMethod')}}">Perfect Money</a></li>
+                                    </ul>
+                                    <div class="login_buttomn">
+                                        <a target="_blank" href="{{route('live_account')}}">Open Live Account</a>
+                                        <a target="_blank" href="{{ route('register') }}">Open Demo Account</a>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
-                    </div>
+                    </ul>
                 </li>
             </ul>
             <!-- Right Side Of Navbar -->
@@ -161,6 +148,3 @@
         </div>
     </div>
 </div>
-{{--Old nav Start--}}
-
-{{--Old Nav End--}}

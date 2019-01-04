@@ -13,23 +13,23 @@
 
 
     <!-- Bootstrap core CSS     -->
-    <link href="{{asset('Dashboard_assets/css/bootstrap.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('public/Dashboard_assets/css/bootstrap.min.css')}}" rel="stylesheet" />
 
     <!-- Animation library for notifications   -->
-    <link href="{{asset('Dashboard_assets/css/animate.min.css')}}" rel="stylesheet"/>
+    <link href="{{asset('public/Dashboard_assets/css/animate.min.css')}}" rel="stylesheet"/>
 
     <!--  Paper Dashboard core CSS    -->
-    <link href="{{asset('Dashboard_assets/css/paper-dashboard.css')}}" rel="stylesheet"/>
+    <link href="{{asset('public/Dashboard_assets/css/paper-dashboard.css')}}" rel="stylesheet"/>
 
 
     <!--  CSS for Demo Purpose, don't include it in your project     -->
-    <link href="{{asset('Dashboard_assets/css/demo.css')}}" rel="stylesheet" />
+    <link href="{{asset('public/Dashboard_assets/css/demo.css')}}" rel="stylesheet" />
 
 
     <!--  Fonts and icons     -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
-    <link href="{{asset('Dashboard_assets/css/themify-icons.css')}}" rel="stylesheet">
+    <link href="{{asset('public/Dashboard_assets/css/themify-icons.css')}}" rel="stylesheet">
 
 </head>
 <body>
@@ -67,12 +67,12 @@
                         <p>Transactions</p>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="ti-bar-chart"></i>
-                        <p>Trades</p>
-                    </a>
-                </li>
+                {{--<li>--}}
+                    {{--<a href="#">--}}
+                        {{--<i class="ti-bar-chart"></i>--}}
+                        {{--<p>Trades</p>--}}
+                    {{--</a>--}}
+                {{--</li>--}}
                 <li>
                     <a href="#">
                         <i class="ti-settings"></i>
@@ -263,7 +263,6 @@
                     </div>
                 </div>
                 <div class="row">
-
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
@@ -373,31 +372,32 @@
 </body>
 
 <!--   Core JS Files   -->
-<script src="{{asset('Dashboard_assets/js/jquery.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('Dashboard_assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('public/Dashboard_assets/js/jquery.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('public/Dashboard_assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
 
 <!--  Checkbox, Radio & Switch Plugins -->
-<script src="{{asset('Dashboard_assets/js/bootstrap-checkbox-radio.js')}}"></script>
+<script src="{{asset('public/Dashboard_assets/js/bootstrap-checkbox-radio.js')}}"></script>
 
 <!--  Charts Plugin -->
-<script src="{{asset('Dashboard_assets/js/chartist.min.js')}}"></script>
+<script src="{{asset('public/Dashboard_assets/js/chartist.min.js')}}"></script>
 
 <!--  Notifications Plugin    -->
-<script src="{{asset('Dashboard_assets/js/bootstrap-notify.js')}}"></script>
+<script src="{{asset('public/Dashboard_assets/js/bootstrap-notify.js')}}"></script>
 
 <!--  Google Maps Plugin    -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
-<script src="{{asset('Dashboard_assets/js/paper-dashboard.js')}}"></script>
+<script src="{{asset('public/Dashboard_assets/js/paper-dashboard.js')}}"></script>
 
 <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
-<script src="{{asset('Dashboard_assets/js/demo.js')}}"></script>
+<script src="{{asset('public/Dashboard_assets/js/demo.js')}}"></script>
 
 <script type="text/javascript">
     $(document).ready(function(){
 
         demo.initChartist();
+
 //        $.notify({
 //            icon: 'ti-gift',
 //            message: "Welcome to <b>The TradeFX.com</b> ."

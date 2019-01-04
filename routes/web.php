@@ -25,6 +25,7 @@ Route::get('/Account-type/Standrad-Account', 'NavigationController@std_acc')->na
 Route::get('/Account-type/VIP-Account', 'NavigationController@vip_acc')->name('vip_acc');
 Route::get('/introducingBroker', 'NavigationController@intro_brok')->name('intro_brok');
 Route::get('/affilateProgram', 'NavigationController@affiliate_prog')->name('affiliate_prog');
+Route::get('/privacy_policy', 'NavigationController@privacy_policy')->name('privacy_policy');
 
 //Route::resource('liveaccount','LiveAccountController');
 Route::get('/createLiveAccount','liveAccountController@index')->name('live_account');
@@ -37,6 +38,7 @@ Route::get('admin/login',function (){
 
 Route::get('/admin/dashbaord','AdminController@index')->name('AdminDashboard');
 Route::get('/loginOpt','NavigationController@login_opt')->name('loginOption');
+Route::get('/Payment-Method','NavigationController@payment')->name('paymentMethod');
 
 Route::middleware(['live'])->group(function(){
     Route::get('/dashboard', 'LiveDashboardController@dashboardView')->name('dashboard');
@@ -49,4 +51,7 @@ Route::middleware(['live'])->group(function(){
 Route::get('/test', function ()
 {
     return view('dashboard.dashboard');
+});
+Route::get('/clearConfig',function (){
+    Artisan::call('config:clear');
 });

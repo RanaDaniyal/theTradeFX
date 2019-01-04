@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/newNavbar.js') }}" defer></script>
 
     <!-- Fonts -->
     <link href="{{asset('images/fav.png')}}" rel="icon" type="images/fav.png" />
@@ -19,17 +20,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_css/bootsnav.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('css/custom_css/bootsnav.css') }}" rel="stylesheet">--}}
+    <link href="{{ asset('css/custom_css/newNavbar.css') }}" rel="stylesheet">
 </head>
 <body>
-    @include('includes.navbar')
-    @include('includes.slider')
-    <main class="py-4">
+{{--    @include('includes.navbar')--}}
+<div class="container-fluid">
+    <div class="row">
+        @include('includes.NavbarNew')
+    </div>
+    <div class="row">
+        @include('includes.slider')
+    </div>
+</div>
         <div class="container-fluid">
-            <div class="row" style="text-align: center;">
+            <div class="row bg-danger" style="text-align: center;padding: 10px 0 10px 0">
                 <div class="col-md-3">
                     <div>
-                        <img border="0" alt="" src="{{url('images/icon_images/icon5.png')}}" />
+                        <img border="0" alt="" src="{{url('images/icon_images/icon5-white.png')}}" />
                     </div>
                     <div>
                         <span style="color:black;">Support</span> <span style="color:black;">24/5</span>
@@ -37,7 +45,7 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <img border="0" alt="" src="{{url('images/icon_images/icon1.png')}}" />
+                        <img border="0" alt="" src="{{url('images/icon_images/icon1-white.png')}}" />
                     </div>
                     <div>
                         <span style="color:black;">Pure STP</span> <span style="color:black;">ECN</span>
@@ -45,7 +53,7 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <img border="0" alt="" src="{{url('images/icon_images/icon4.png')}}" />
+                        <img border="0" alt="" src="{{url('images/icon_images/icon4-white.png')}}" />
                     </div>
                     <div>
                         <span style="color:black;">Variety of </span> <span style="color:black;">Platforms</span>
@@ -53,17 +61,17 @@
                 </div>
                 <div class="col-md-3">
                     <div>
-                        <img border="0" alt="" src="{{url('images/icon_images/icon3.png')}}" />
+                        <img border="0" alt="" src="{{url('images/icon_images/icon3-white.png')}}" />
                     </div>
                     <div>
-                        <span style="color:black;">Forex, Gold </span> <span style="color:black;">&amp; Silver</span>
+                        <span class="color-light">Forex, Gold </span> <span>&amp; Silver</span>
                     </div>
                 </div>
             </div>
         </div>
 
         {{--2nd Div Start--}}
-        <div class="container">
+        <div class="container-fluid" style="margin-top: 10px">
             <div class="row">
                 <div class="col-md-8">
                     <h1 style="color: #d01919">Forex Platforms</h1></br>
@@ -250,7 +258,7 @@
         {{--3rd Div end--}}
 
         {{--last Div--}}
-        <div class="container">
+        <div class="container" style="margin-top: 20px;")>
             <div class="card-deck  mb-3">
                 <div class="card mb-4  shadow-sm">
                     <div class="card-header text-white bg-danger text-center">
@@ -301,7 +309,7 @@
                                 </ul>
                             </li>
                         </ul>
-                        <a role="button" href="{{ route('live_account') }}" type="button" class="btn btn-lg btn-block btn-dark">Create Live Account</a>
+                        <a role="button" href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-outline-dark">Create Live Account</a>
                     </div>
                 </div>
                 <div class="card mb-4 shadow-sm">
@@ -315,8 +323,8 @@
                             <li>Negative balance protection</li>
                             <li>Risk management</li>
                         </ul>
-                        <div>
-                            <a role="button" type="button" href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-dark" >Create a Live Account</a>
+                        <div style="padding-top: 93px">
+                            <a role="button"  href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-outline-dark" >Create a Live Account</a>
                         </div>
                     </div>
                     <div class="row">
@@ -338,14 +346,13 @@
                             <li>Commissions paid into a trading account in real time</li>
                             <li>Commission Everyday Payment</li>
                         </ul>
-                        <a role="button" type="button" href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-dark">Create Live Account</a>
+                        <a role="button"  href="{{ route('live_account') }}" class="btn btn-lg btn-block btn-outline-dark">Create Live Account</a>
                     </div>
                 </div>
             </div>
 
         </div>
         {{--last Div End--}}
-    </main>
     @include('includes.footer')
-{{--</body>--}}
-{{--</html>--}}
+</body>
+</html>

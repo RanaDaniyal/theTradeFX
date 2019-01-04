@@ -1,5 +1,7 @@
 @extends('layouts.app')
+@section('stylesheet')
 
+@endsection
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -12,73 +14,7 @@
                     <div class="card-body">
                         <form method="POST" action="{{route('createLiveAccount')}}">
                             @csrf
-                            {{--Curency Input Start--}}
 
-                            <div class="form-group row">
-                                <label for="currency" class="col-md-4 col-form-label text-md-right">{{ __('Currency') }}</label>
-
-                                <div class="col-md-6">
-                                    <input id="currency" type="text" class="form-control{{ $errors->has('currency') ? ' is-invalid' : '' }}" name="currency" value="{{ old('currency') }}" required autofocus>
-
-                                    @if ($errors->has('currency'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('currency') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            {{--Curency Input End--}}
-
-
-                            {{--Account Type Input--}}
-
-                            <div class="form-group row">
-                                <label for="account_type" class="col-md-4 col-form-label text-md-right">{{ __('Account Type') }}</label>
-
-                                <div class="col-md-6">
-                                    {{--<input id="account_type" type="text" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus>--}}
-                                    <input list="account_type" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus>
-                                    <datalist id="account_type">
-                                        <option value="Micro">
-                                        <option value="Standard">
-                                        <option value="VIP">
-                                    </datalist>
-                                    @if ($errors->has('account_type'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('account_type') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-                            {{--Account Type Input End --}}
-                            {{--Leverage Start--}}
-                            <div class="form-group row">
-                                <label for="leverage" class="col-md-4 col-form-label text-md-right">{{ __('leverage') }}</label>
-
-                                <div class="col-md-6">
-                                    {{--<input id="leverage" type="text" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>--}}
-                                    <input list="leverage" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>
-                                    <datalist id="leverage">
-                                        <option value="1:1000">
-                                        <option value="1:500">
-                                        <option value="1:400">
-                                        <option value="1:300">
-                                        <option value="1:200">
-                                        <option value="1:100">
-                                    </datalist>
-                                    @if ($errors->has('leverage'))
-                                        <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('leverage') }}</strong>
-                                    </span>
-                                    @endif
-                                </div>
-                            </div>
-
-
-
-                            {{--Leverage End--}}
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
@@ -95,7 +31,7 @@
 
                             {{--User_name Added Start--}}
                             <div class="form-group row">
-                                <label for="user_name" class="col-md-4 col-form-label text-md-right">{{ __('User Name') }}</label>
+                                <label for="user_name" class="col-md-4 col-form-label text-md-right">{{ __('Sur Name') }}</label>
 
                                 <div class="col-md-6">
                                     <input id="user_name" type="text" class="form-control{{ $errors->has('user_name') ? ' is-invalid' : '' }}" name="user_name" value="{{ old('user_name') }}" required autofocus>
@@ -122,7 +58,74 @@
                                     @endif
                                 </div>
                             </div>
+                            {{--Curency Input Start--}}
 
+                            <div class="form-group row">
+                                <label for="currency" class="col-md-4 col-form-label text-md-right">{{ __('Currency') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="currency" placeholder="USD" type="text" class="form-control{{ $errors->has('currency') ? ' is-invalid' : '' }}" name="currency" value="{{ old('currency') }}" required autofocus>
+
+                                    @if ($errors->has('currency'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('currency') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            {{--Curency Input End--}}
+
+
+                            {{--Account Type Input--}}
+
+                            <div class="form-group row">
+                                <label for="account_type" class="col-md-4 col-form-label text-md-right">{{ __('Account Type') }}</label>
+
+                                <div class="col-md-6">
+                                    {{--<input id="account_type" type="text" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus>--}}
+                                    <input list="account_type" placeholder="Micro" class="form-control{{ $errors->has('account_type') ? ' is-invalid' : '' }}" name="account_type" value="{{ old('account_type') }}" required autofocus >
+                                    <span class="caret"></span>
+                                    <datalist id="account_type">
+                                        <option selected value="Micro">Micro</option>
+                                        <option value="Standard">Standard</option>
+                                        <option value="VIP">VIP</option>
+                                    </datalist>
+                                    @if ($errors->has('account_type'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('account_type') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            {{--Account Type Input End --}}
+                            {{--Leverage Start--}}
+                            <div class="form-group row">
+                                <label for="leverage" class="col-md-4 col-form-label text-md-right">{{ __('leverage') }}</label>
+
+                                <div class="col-md-6">
+                                    {{--<input id="leverage" type="text" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>--}}
+                                    <input list="leverage" placeholder="1:1000" class="form-control{{ $errors->has('leverage') ? ' is-invalid' : '' }}" name="leverage" value="{{ old('leverage') }}" required autofocus>
+                                    <datalist id="leverage">
+                                        <option value="1:1000">
+                                        <option value="1:500">
+                                        <option value="1:400">
+                                        <option value="1:300">
+                                        <option value="1:200">
+                                        <option value="1:100">
+                                    </datalist>
+                                    @if ($errors->has('leverage'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('leverage') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+
+
+                            {{--Leverage End--}}
                             {{--Address Input Sart--}}
                             <div class="form-group row">
                                 <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Address') }}</label>
@@ -219,4 +222,7 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+
 @endsection

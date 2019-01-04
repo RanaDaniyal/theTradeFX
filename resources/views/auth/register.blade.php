@@ -26,7 +26,7 @@
                         </div>
                         {{--User_name Added Start--}}
                         <div class="form-group row">
-                            <label for="user_name" class="col-md-4 col-form-label text-md-right">{{ __('User Name') }}</label>
+                            <label for="user_name" class="col-md-4 col-form-label text-md-right">{{ __('Sur Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="user_name" type="text" class="form-control{{ $errors->has('user_name') ? ' is-invalid' : '' }}" name="user_name" value="{{ old('user_name') }}" required autofocus>

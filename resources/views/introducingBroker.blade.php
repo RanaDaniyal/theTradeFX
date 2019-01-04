@@ -1,32 +1,10 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/custom_css/bootsnav.css') }}" rel="stylesheet">
-</head>
-<body>
-@include('includes.navbar')
-@include('includes.slider')
+@extends('layouts.app')
+@section('content')
+<img class="d-block w-100" src="{{url('images/slider_images/slider_img4.jpg')}}" style="margin-top: -28px">
 <div class="container-fluid">
    <div class="container">
     <div class="row">
-        <div class="contact_heding comparison text-center"> <h1>Introducing Brokers</h1>
+        <div class="contact_heding comparison text-center"> <h1>Introducing Broker</h1>
             <p style="text-align:center;"> An “Introducing Broker” is an agent (corporation or individual) that establishes direct relationships with clients while introducing their business and delegating their accounts administrative work to the licensed & regulated Thetradefx.com which will be holding clients funds and will be responsible of their trades execution while the “Introducing Broker” focuses on growing his business.
                 Thetradefx.com works closely with its “Introducing Broker” partners to provide them with superior incentives and unparalleled success opportunities. The company’s “Introducing Broker” partnership program offers full support to corporations, individuals and traders of all experience levels in developing their own trading business.
                 .</p>
@@ -46,13 +24,12 @@
                 •	Advanced cookie tracking and web reporting
             </p>
 
-            <p><a class="red_button" href="" target="_blank">CREATE BROKER ACCOUNT</a>
+            <p><a class="red_button" href="" >CREATE PARTNER ACCOUNT</a>
             </p>
 
         </div>
     </div>
    </div>
-    @include('includes.footer')
 </div>
-</body>
-</html>
+    @endsection
+

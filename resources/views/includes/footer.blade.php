@@ -22,11 +22,11 @@
                 <h5>Information
                 </h5>
                 <ul>
-                    <li><a href=""><span>Trading Platform</span></a></li>
-                    <li><a href=""><span>Account Types</span></a></li>
-                    <li><a href=""><span>Partners</span></a></li>
+                    {{--<li><a href=""><span>Trading Platform</span></a></li>--}}
+                    <li><a href="{{route('micro_acc')}}"><span>Account Types</span></a></li>
+                    <li><a href="{{route('intro_brok')}}"><span>Partners</span></a></li>
                     <li><a href=""><span>Contact Us</span></a></li>
-                    <li><a href=""><span>Terms &amp; Conditions</span></a></li>
+                    <li><a href="{{route('privacy_policy')}}"><span>Privacy Policy</span></a></li>
                     <li><a href=""><span>Risk Disclosure Statement</span></a></li>
 
                 </ul>
@@ -34,9 +34,9 @@
             <div class="col-md-3 col-sm-3">
                 <div>Contact Us
                 </div>
-                <div class="ftr-add">The Trade FX
+                <div>The Trade FX
                 </div> <a class="ftr-mail" href="mailto:support@thetradefx.com">support@thetradefx.com</a>
-                <div class="ftr-phn"> 0035796525867
+                <div> 0035796525867
                 </div>&nbsp;
             </div>
         </div>

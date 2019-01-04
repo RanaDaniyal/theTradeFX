@@ -14,6 +14,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/newNavbar.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -21,17 +22,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/custom_css/bootsnav.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/custom_css/newNavbar.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
+    @yield('stylesheet')
 </head>
 <body>
     <div id="app">
-        @include('includes.navbar')
-
+        <div class="container-fluid bg-secondary">
+            <div class="row">
+                @include('includes.NavbarNew')
+            </div>
+        </div>
         <main class="py-4">
             @yield('content')
         </main>
     </div>
-
+    @include('includes.footer')
 </body>
+    @yield('scripts')
 </html>
